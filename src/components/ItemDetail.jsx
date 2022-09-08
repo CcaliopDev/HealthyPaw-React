@@ -8,7 +8,7 @@ const ItemDetail = ({ product }) => {
         <h1>El producto no existe</h1>
       ) : (
         <div className="itemDetail">
-          <img src={`${product.img}`} className="imagenDetalle" alt="" />
+          <img src={`/${product.img}`} className="imagenDetalle" alt="" />
           <div className="detallesEstilo">
             <h2>{product.nombre}</h2>
             <p>{product.descripcion}</p>

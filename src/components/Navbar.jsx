@@ -1,14 +1,15 @@
 import React from 'react'
 import { CartWidget } from './CartWidget'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to={'/'}>
             Healthy Paw
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,20 +24,20 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/'}>
                   Inicio
                   <span className="visually-hidden">(current)</span>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/'}>
                   Ofertas
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/'}>
                   Tablas nutricionales
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -49,17 +50,18 @@ const Navbar = () => {
                 >
                   Raciones
                 </a>
+                {/* </Link> */}
                 <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={'/category/perro'}>
                     Perros
-                  </a>
-                  <a className="dropdown-item" href="#">
+                  </Link>
+                  <Link className="dropdown-item" to={'/category/gato'}>
                     Gatos
-                  </a>
+                  </Link>
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to={'/'}>
                     Todo
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ul>

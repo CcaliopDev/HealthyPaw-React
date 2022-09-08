@@ -1,0 +1,11 @@
+.estiloLista {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: Row;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-radius: 6;
+  align-items: stretch;
+  gap: 2rem;
+}
