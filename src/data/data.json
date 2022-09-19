@@ -50,6 +50,7 @@
     "nombre": "Nutrique Medium Young Adult Dog 3 KG",
     "descripcion": "Alimento preium para perros de raza mediana",
     "precio": 1315,
-    "img": "./img/perro_nutrique-medium-young-adult-dog-3-kg_600.png"
+    "img": "./img/perro_nutrique-medium-young-adult-dog-3-kg_600.png",
+    "stock": 20
   }
 ]
