@@ -1,24 +1,39 @@
 import React from 'react'
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from 'firebase/firestore'
 import '../styles/ItemListContainer.css'
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList'
-import data from '../data/data.json'
 import { useParams } from 'react-router-dom'
+import Loader from './Loader'
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
   const { idCategory } = useParams()
 
-  const getData = new Promise((resolve, reject) => {
-    if (!idCategory) {
-      resolve(data)
-    } else {
-      resolve(data.filter((p) => p.categoria === idCategory.toLowerCase()))
-    }
-  })
   useEffect(() => {
-    getData.then((response) => {
-      setProductos(response)
-    })
+    setLoading(true)
+    setProductos([])
+    const db = getFirestore()
+
+    const itemCollection = collection(db, 'productos')
+    const collectionFiltered = query(
+      collection(db, 'productos'),
+      where('categoria', '==', `${idCategory}`),
+    )
+
+    getDocs(!idCategory ? itemCollection : collectionFiltered)
+      .then((snapshot) => {
+        setProductos(
+          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })),
+        )
+      })
+      .finally(() => setLoading(false))
   }, [idCategory])
 
   function onAdd(count, stock) {
@@ -31,6 +46,7 @@ const ItemListContainer = ({ greeting }) => {
     <>
       <div className="contenedor">{greeting}</div>
       <ItemList items={productos} />
+      <Loader loading={loading} />
     </>
   )
 }
