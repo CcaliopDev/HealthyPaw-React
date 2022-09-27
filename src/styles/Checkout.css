@@ -1,0 +1,13 @@
+.styleCheckout {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: Column;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 1rem;
+  align-items: center;
+  min-height: calc(100vh - 8rem);
+}
+.styleInput {
+  width: 50%;
+}

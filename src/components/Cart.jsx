@@ -34,9 +34,11 @@ const Cart = () => {
               <button className="card__link btn btn-primary" onClick={clean}>
                 Limpiar carrito
               </button>
-              <button className="card__link btn btn-primary">
-                Terminar compra
-              </button>
+              <Link to={'/checkout'}>
+                <button className="card__link btn btn-primary">
+                  Terminar compra
+                </button>
+              </Link>
             </div>
           </div>
         </>
