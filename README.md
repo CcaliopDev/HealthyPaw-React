@@ -1,7 +1,42 @@
 # Pet Shop Healthy Paw
 
-## Este es mi proyecto del curso React js de Coderhouse, se trata de un Ecommerce donde se venden alimentos y productos de diferentes marcas para perros y gatos.
+#
+
+## Descripción
+
+### Hice mi proyecto del curso de React en coderhouse basado en un petshop llamado Healthy paw.
 
 #
 
-## Este proyecto esta separado en componentes conectados entre sí pasando props a los hijos y se manejan estados utilizando los hooks de useState y useEffect, el código relacionado al diseño para cada componente en su propio CSS, el proyecto le cree usando Create React APP y tiene las mejores practicas para programar aplicadas a lo largo del mismo.
+## Setup
+
+### Use los siguientes scripts para clonar el repositorio, descargar los node modules y correr la app.
+
+Clonar repositorio:
+
+```
+git clone https://github.com/CcaliopDev/HealthyPaw-React.git
+```
+
+Instalar dependencias:
+
+```
+npm install
+```
+
+Correr el proyecto:
+
+```
+npm start
+```
+
+## Librerias y tecnologias usadas.
+
+- [Sweet Alert](https://sweetalert2.github.io/)
+  Implemente esto, para tener una mejor interaccion con el usuario, darle la mejor experiencia con alertas personalizadas.
+- [moment](https://momentjs.com/)
+  Se uso para obtener la fecha y hora.
+- [Firebase](https://firebase.google.com/)
+  Lo use para guardar los datos y multimedia que usa la aplicacion, ya que es facil de usar y me permite poder conectarme a datos externos sin tener un backend.
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+  Implemente bootstrap para darle estilo a la pagina.
